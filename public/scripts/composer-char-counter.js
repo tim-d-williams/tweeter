@@ -6,8 +6,13 @@ $(document).ready(function() {
     let tweetLength = $(this).val().length
     // target counter
     $(this).siblings('.counter').text(140 - tweetLength)
-  })
 
+  if (tweetLength > 140) {
+    $(this).siblings('.counter').css({color: 'red'})
+  }
+
+
+})
 
 
 });
