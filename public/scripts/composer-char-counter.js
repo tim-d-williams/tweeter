@@ -3,7 +3,13 @@ $(document).ready(function() {
 });
 
 $('.new-tweet textarea').on('keypress', function()  {
-  console.log(this.textLength)});
+  // console.log(this.textLength)
+  let charsLeft = 139;
+  console.log(charsLeft -= $(this).val().length)
+
+
+
+});
 
 
 
