@@ -24,18 +24,26 @@ $('#new-tweet').on('submit', function (event) {
   postTweet(tweetData);
 })
 
-function postTweet(tweetData) {
-  $.post('http://localhost:8080/tweets', tweetData).then (tweet => {
-  let tweetElement = createTweetElement(tweet)
-  render(tweetElement)
-  })
-}
+
+
+  function postTweet(tweetData) {
+    if ($('textarea').val().length > 140) {
+      alert('Your tweet is too long! Please limit to 140 characters.')
+    } else if
+       ($('textarea').val() === "" || null ) {
+        alert('Your tweet is empty! You can do better!')
+    } else {
+        $.post('http://localhost:8080/tweets', tweetData).then (tweet => {
+        let tweetElement = createTweetElement(tweet)
+        render(tweetElement)
+      })
+    }
+  }
 
 
 function renderTweets(tweets) {
   $('#tweet-container').append(tweets)
   };
-
 
 let createTweetElement = function(tweet) {
   var $tweet = $("<article>").addClass("tweet")
