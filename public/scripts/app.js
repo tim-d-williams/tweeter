@@ -57,8 +57,18 @@ $('#new-tweet').on('submit', function (event) {
   event.preventDefault();
   let tweetData = $(this).serialize()
 
-  console.log(tweetData);
+  postTweet(tweetData);
 })
+
+function postTweet(tweetData) {
+  $.post('http://localhost:8080/tweets', tweetData).then (tweet => {
+  let tweetElement = createTweetElement(tweet)
+  console.log(tweetElement)
+  })
+}
+
+
+
 
 // loops through tweets
   // calls createTweetElement for each tweet
@@ -102,6 +112,5 @@ let createTweetElement = function(tweet) {
       $('#tweet-container').append($tweet)
       return $tweet
 }
-
 
 })
