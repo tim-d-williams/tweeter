@@ -1,0 +1,12 @@
+
+ article {
+  margin: 10px auto auto auto;
+}
+
+article.tweet header {
+  background-color: #eee;
+}
+
+article.tweet img {
+  padding: 10px;
+}

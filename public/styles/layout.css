@@ -31,15 +31,3 @@ body {
   background-color: white;
   padding: 1em 2em;
  }
-
- article {
-   margin: 10px auto auto auto;
- }
-
- article.tweet header {
-   background-color: #eee;
- }
-
- article.tweet img {
-   padding: 10px;
- }
