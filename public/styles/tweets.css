@@ -1,12 +1,40 @@
-
  article {
   margin: 10px auto auto auto;
+  border: 2px solid #eee;
+  border-radius: 10px;
 }
 
 article.tweet header {
   background-color: #eee;
+  display: flex;
+  flex-direction: row;
 }
 
 article.tweet img {
   padding: 10px;
+  width:  60px;
+  height: 60px;
 }
+
+article.tweet h3 {
+  margin-top: 10px;
+
+}
+article.tweet h4 {
+  margin: 10px 10px auto auto;
+  font-weight: 300;
+
+}
+
+.tweet-body {
+  margin: auto auto auto 5px;
+}
+
+.tweet footer {
+  border-top: 2px solid #eee;
+}
+
+.tweet footer p {
+  margin-left: 5px;
+}
+
