@@ -12,7 +12,7 @@ $(document).ready(function() {
   }
 
 })
-
+//change opacity on hover
   $('.tweet').hover(
     function () {
     $(this).css( { opacity: 1 });
@@ -20,5 +20,11 @@ $(document).ready(function() {
       function () {
   $(this).css( { opacity: .5 });
   })
+
+  //display footer icons on hover
+  $('.tweet').hover(
+    function () {
+      $('.icons').toggle();
+    })
 
 });
