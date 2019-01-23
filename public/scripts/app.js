@@ -6,12 +6,30 @@
 
 
 let createTweetElement = function(tweet) {
-  var $tweet = $("<article>").addClass("tweet")
-    .append($('<header>')
+  let $tweet = $("<article>").addClass("tweet")
+
+  let header = $('<header>')
+    .append($('<img>')
+      .attr('src', tweet.user.avatars.regular))
+    .append($('<h3>').text(tweet.user.name))
+    .append($('<h4>').text(tweet.user.handle))
+
+  let body = $("<div>").addClass("tweet-body")
+    .append($("<p>").text(tweet.content.text))
+
+  let footer = $('<footer>')
+    .append($("<p>").text(Date.now() - tweet.created_at))
+    .append($('<div>').addClass("icons")
       .append($('<img>')
-        .attr('src', tweet.user.avatars.regular))
-      .append($('<h3>').text(tweet.user.name))
-      .append($('<h4>').text(tweet.user.handle)))
+        .attr('src', "images/baseline-flag-24px.svg"))
+      .append($('<img>')
+        .attr('src', "images/iconmonstr-retweet-1.svg"))
+      .append($('<img>')
+        .attr('src', "images/baseline-favorite-24px.svg")))
+
+    $tweet.append($(header))
+      .append($(body))
+      .append($(footer))
 
       return $tweet
 }
