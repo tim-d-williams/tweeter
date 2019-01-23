@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  console.log('dom has loaded')
-
 
   $('.new-tweet textarea').on('keyup', function()  {
     let tweetLength = $(this).val().length
@@ -16,7 +14,7 @@ $(document).ready(function() {
   $('.tweet').hover(
     function () {
     $(this).css( { opacity: 1 });
-    },
+     },
       function () {
   $(this).css( { opacity: .5 });
   })
@@ -24,7 +22,7 @@ $(document).ready(function() {
   //display footer icons on hover
   $('.tweet').hover(
     function () {
-      $('.icons').toggle();
+      $(this).siblings('.icons').toggle();
     })
 
 });
