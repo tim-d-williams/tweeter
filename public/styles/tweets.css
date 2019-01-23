@@ -3,13 +3,17 @@
   border-radius: 10px;
   border: 2px solid #d0d0d0d0;
   opacity: .5;
+}
 
+article:hover {
+  opacity: 1;
 }
 
 article.tweet header {
   background-color: #eee;
   display: flex;
   flex-direction: row;
+  border-radius: 10px;
 }
 
 article.tweet img {
@@ -50,6 +54,8 @@ article.tweet h4 {
 
 .icons {
   margin-left: auto;
-  display: none;
+  opacity: .0;
+}
+article:hover .icons {
   opacity: .3;
 }

@@ -77,7 +77,7 @@ let createTweetElement = function(tweet) {
 
     //set all footer elements to var
   let footer = $('<footer>')
-    .append($("<p>").text(new Date() - tweet.created_at))
+    .append($("<p>").text(Date.now() - tweet.created_at))
     .append($('<div>').addClass("icons")
       .append($('<img>')
         .attr('src', "images/baseline-flag-24px.svg"))

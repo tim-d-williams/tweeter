@@ -10,19 +10,5 @@ $(document).ready(function() {
   }
 
 })
-//change opacity on hover
-  $('.tweet').hover(
-    function () {
-    $(this).css( { opacity: 1 });
-     },
-      function () {
-  $(this).css( { opacity: .5 });
-  })
-
-  //display footer icons on hover
-  $('.tweet').hover(
-    function () {
-      $(this).siblings('.icons').toggle();
-    })
 
 });
