@@ -11,9 +11,14 @@ $(document).ready(function() {
     $(this).siblings('.counter').css({color: 'red'})
   }
 
-
 })
 
+  $('.tweet').hover(
+    function () {
+    $(this).css( { opacity: 1 });
+    },
+      function () {
+  $(this).css( { opacity: .5 });
+  })
 
 });
-
