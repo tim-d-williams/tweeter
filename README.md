@@ -4,8 +4,8 @@ Tweeter is a simple, single-page Ajax-based Twitter clone which uses HTML, CSS, 
 
 # Final Product
 
-!["Screenshot of the tweet editor"](/Users/timwilliams/lighthouse/tweeter_project/docs/tweet-editor.png)
-!["Screenshot of the tweet feed"](/Users/timwilliams/lighthouse/tweeter_project/docs/tweet-feed.png)
+!["Screenshot of the tweet editor"](https://github.com/tim-d-williams/tweeter/blob/master/docs/tweet-editor.png?raw=true)
+!["Screenshot of the tweet feed"](https://github.com/tim-d-williams/tweeter/blob/master/docs/tweet-feed.png?raw=true)
 
 ## Getting Started
 
