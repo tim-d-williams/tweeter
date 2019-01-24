@@ -54,16 +54,26 @@ $(document).ready(function() {
     })
 
   function postTweet(tweetData) {
-    if ($('textarea').val().length > 140) {
-      alert('Your tweet is too long! Please limit to 140 characters.')
-    } else if
-       ($('textarea').val() === "" || null ) {
-        alert('Your tweet is empty! You can do better!')
-    } else {
+    // let errorTooLong = ($('.error').prepend($('<img>').attr('src', "images/error.png"))
+    //   .append($("<p>").text('Your tweet is too long!')))
+    // let errorTooShort = ($('.error').prepend($('<img>').attr('src', "images/error.png"))
+    // .append($("<p>").text('Your tweet is empty!')))
+
+    // if ($('textarea').val().length > 140) {
+    //   $('.error').slideToggle(100, function() {
+    //    $(this).append(errorTooLong)
+    //    })
+    //   }
+    // else if
+    //    ($('textarea').val() === "" || null) {
+    //     $('.error').slideToggle(100, function() {
+    //       $(this).append(errorTooShort)
+    //       })
+    // } else {
         $.post('/tweets', tweetData).then (tweet => {
         loadTweets(tweet)
-      })
-    }
+    //   })
+    })
   }
 
   function renderTweets(tweets) {
