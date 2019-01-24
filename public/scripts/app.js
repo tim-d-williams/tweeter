@@ -54,12 +54,8 @@ $(document).ready(function() {
       ($('.error').slideToggle(200)
         .children().remove()
           .css( {display: 'none'} ))
-
       }
-
-console.log('tweet data', tweetData)
     postTweet(tweetData);
-
   })
 
   function postTweet(tweetData) {
@@ -82,8 +78,11 @@ console.log('tweet data', tweetData)
       }
         else {
         $.post('/tweets', tweetData).then (tweet => {
+          $('.new-tweet textarea').val('')
+          let counter = $('.new-tweet textarea').siblings('footer').children('.counter')
+          $(counter).text('140');
           loadTweets(tweet)
-        //  $('textarea').val('');
+
         })
     }
   }
