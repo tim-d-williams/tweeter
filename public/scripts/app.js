@@ -6,6 +6,9 @@
 
 $(document).ready(function() {
 
+  //Attach timeago to DOM
+  $("time.timeago").timeago();
+
   function loadTweets () {
     $.get('/tweets')
     .then (tweets => {
@@ -28,8 +31,9 @@ $(document).ready(function() {
       .append($("<p>").text(tweet.content.text))
 
       //set all footer elements to var
+      let timeSince = $.timeago(tweet.created_at)
     let footer = $('<footer>')
-      .append($("<p>").text(Date.now() - tweet.created_at))
+      .append($("<p>").text(timeSince))
       .append($('<div>').addClass("icons")
         .append($('<img>')
           .attr('src', "images/baseline-flag-24px.svg"))

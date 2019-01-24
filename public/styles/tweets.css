@@ -34,6 +34,7 @@ article.tweet h4 {
 
 .tweet-body {
   margin: auto auto auto 5px;
+  padding: 0px 5px 0px 5x;
 }
 
 .tweet footer {
