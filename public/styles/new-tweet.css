@@ -13,7 +13,7 @@ input {
   padding: 0px 10px 0px 10px;
   border-radius: 10px;
   background-color: #eee;
-
+  display: none;
  }
 
  .new-tweet h2 {
