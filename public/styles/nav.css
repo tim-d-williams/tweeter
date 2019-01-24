@@ -21,3 +21,14 @@
   margin-left: 10px;
   line-height: 80px;
 }
+
+button {
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin: 15px auto auto auto;
+  float: right;
+}
+
+div .buttons {
+  padding-right: 10px;
+}
