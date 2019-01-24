@@ -31,5 +31,23 @@ input {
   display: none;
   color: #D8000C;
   background-color: #FFBABA;
+  padding: 0px 5px;
+}
+
+.error :focus-visible {
+  display: inline-flex;
+  height: 30px;
+}
+
+.error img {
   padding: 5px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.error p {
+  display: inline-flex;
+  padding: 5px;
+  margin: auto 5px;
 }

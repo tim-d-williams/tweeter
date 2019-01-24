@@ -54,27 +54,34 @@ $(document).ready(function() {
     })
 
   function postTweet(tweetData) {
-    // let errorTooLong = ($('.error').prepend($('<img>').attr('src', "images/error.png"))
-    //   .append($("<p>").text('Your tweet is too long!')))
-    // let errorTooShort = ($('.error').prepend($('<img>').attr('src', "images/error.png"))
-    // .append($("<p>").text('Your tweet is empty!')))
+
+
+    // const errorTooLong = $('.error').prepend($('<img>').attr('src', "images/error.png"))
+    //   .append($("<p>").text('Your tweet is too long!'));
+    console.log('textarea', $('textarea').val())
+
+    if (!$.trim($('textarea').val())) {
+      const errorTooShort = $('.error').prepend($('<img>').attr('src', "images/error.png"))
+        .append($("<p>").text('Your tweet is empty!'));
+
+        $('.error').slideToggle(100, function() {
+          $(this).append(errorTooShort)
+        })
+    }
 
     // if ($('textarea').val().length > 140) {
     //   $('.error').slideToggle(100, function() {
     //    $(this).append(errorTooLong)
     //    })
     //   }
-    // else if
-    //    ($('textarea').val() === "" || null) {
-    //     $('.error').slideToggle(100, function() {
-    //       $(this).append(errorTooShort)
-    //       })
+
+
     // } else {
-        $.post('/tweets', tweetData).then (tweet => {
-        loadTweets(tweet)
-    //   })
-    })
-  }
+      //   $.post('/tweets', tweetData).then (tweet => {
+      //   loadTweets(tweet)
+      // })
+    }
+  // }
 
   function renderTweets(tweets) {
     $('.tweet').remove()
