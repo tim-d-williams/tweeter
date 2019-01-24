@@ -24,17 +24,20 @@ article.tweet img {
 
 article.tweet h3 {
   margin-top: 10px;
-
 }
+
 article.tweet h4 {
   margin: 10px 10px auto auto;
   font-weight: 300;
-
 }
 
 .tweet-body {
+  overflow-wrap: break-word;
+}
+
+.tweet-body p {
   margin: auto auto auto 5px;
-  padding: 0px 5px 0px 5x;
+  padding: 5px;
 }
 
 .tweet footer {
@@ -47,11 +50,6 @@ article.tweet h4 {
   margin-left: 5px;
 }
 
-.tweet-body {
-  overflow-wrap: break-word;
-
-}
-
 .tweet footer img {
   width: 40px;
   height: 40px;
@@ -62,6 +60,7 @@ article.tweet h4 {
   margin-left: auto;
   opacity: .0;
 }
+
 article:hover .icons {
   opacity: .3;
 }

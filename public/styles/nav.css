@@ -29,6 +29,14 @@ button {
   float: right;
   background-color: #eee;
   font-size: 1.25em;
+  opacity: .9;
+}
+
+button img {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  padding-right: 3px
 }
 
 button:hover {
