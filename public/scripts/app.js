@@ -75,4 +75,10 @@ $(document).ready(function() {
   }
 
 loadTweets();
+
+$( "#compose" ).click(function() {
+  $( ".new-tweet" ).slideToggle(100);
+  });
+
+
 })
