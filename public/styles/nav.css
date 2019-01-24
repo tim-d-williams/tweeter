@@ -23,10 +23,16 @@
 }
 
 button {
-  padding: 15px 10px;
+  padding: 10px;
   border-radius: 5px;
   margin: 15px auto auto auto;
   float: right;
+  background-color: #eee;
+  font-size: 1.25em;
+}
+
+button:hover {
+  background-color: white;
 }
 
 div .buttons {
