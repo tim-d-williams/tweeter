@@ -50,15 +50,19 @@ $(document).ready(function() {
     event.preventDefault();
     let tweetData = $(this).serialize()
 
+    if ($('.error').is(':visible')) {
+      ($('.error').slideToggle(200)
+        .children().remove()
+          .css( {display: 'none'} ))
+
+      }
+
+console.log('tweet data', tweetData)
     postTweet(tweetData);
-    })
+
+  })
 
   function postTweet(tweetData) {
-
-
-    // const errorTooLong = $('.error').prepend($('<img>').attr('src', "images/error.png"))
-    //   .append($("<p>").text('Your tweet is too long!'));
-    console.log('textarea', $('textarea').val())
 
     if (!$.trim($('textarea').val())) {
       const errorTooShort = $('.error').prepend($('<img>').attr('src', "images/error.png"))
@@ -67,21 +71,22 @@ $(document).ready(function() {
         $('.error').slideToggle(100, function() {
           $(this).append(errorTooShort)
         })
+      }
+      else if ($('textarea').val().length > 140) {
+        const errorTooLong = $('.error').prepend($('<img>').attr('src', "images/error.png"))
+          .append($("<p>").text('Your tweet is too long!'));
+
+          $('.error').slideToggle(100, function() {
+            $(this).append(errorTooLong)
+          })
+      }
+        else {
+        $.post('/tweets', tweetData).then (tweet => {
+          loadTweets(tweet)
+        //  $('textarea').val('');
+        })
     }
-
-    // if ($('textarea').val().length > 140) {
-    //   $('.error').slideToggle(100, function() {
-    //    $(this).append(errorTooLong)
-    //    })
-    //   }
-
-
-    // } else {
-      //   $.post('/tweets', tweetData).then (tweet => {
-      //   loadTweets(tweet)
-      // })
-    }
-  // }
+  }
 
   function renderTweets(tweets) {
     $('.tweet').remove()
