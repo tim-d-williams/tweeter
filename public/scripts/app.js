@@ -69,7 +69,7 @@ $(document).ready(function() {
           .css( {display: 'none'} ));
       }
 
-      if (!$.trim($(tweetData))) {
+      if (!$.trim($('textarea').val())) {
         const errorTooShort = $('.error').prepend($('<img>').attr('src', "images/error.png"))
           .append($("<p>").text('Your tweet is empty!'));
 
@@ -77,7 +77,7 @@ $(document).ready(function() {
             $(this).append(errorTooShort);
           });
         }
-        else if ($(tweetData).length > 140) {
+        else if ($('textarea').val().length > 140) {
           const errorTooLong = $('.error').prepend($('<img>').attr('src', "images/error.png"))
             .append($("<p>").text('Your tweet is too long!'));
 
